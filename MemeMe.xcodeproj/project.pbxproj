@@ -17,6 +17,7 @@
 		FBEF6B801B27789D006A9BF6 /* MemeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEF6B7F1B27789D006A9BF6 /* MemeTableController.swift */; };
 		FBEF6B821B2778C6006A9BF6 /* MemeCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEF6B811B2778C6006A9BF6 /* MemeCollectionController.swift */; };
 		FBEF6B841B277910006A9BF6 /* MemeEditorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEF6B831B277910006A9BF6 /* MemeEditorController.swift */; };
+		FBEF6B861B277ABB006A9BF6 /* MemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEF6B851B277ABB006A9BF6 /* MemeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		FBEF6B7F1B27789D006A9BF6 /* MemeTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTableController.swift; sourceTree = "<group>"; };
 		FBEF6B811B2778C6006A9BF6 /* MemeCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeCollectionController.swift; sourceTree = "<group>"; };
 		FBEF6B831B277910006A9BF6 /* MemeEditorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeEditorController.swift; sourceTree = "<group>"; };
+		FBEF6B851B277ABB006A9BF6 /* MemeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				FBEF6B5D1B276589006A9BF6 /* AppDelegate.swift */,
 				FBEF6B5F1B276589006A9BF6 /* ViewController.swift */,
 				FBEF6B611B276589006A9BF6 /* Main.storyboard */,
+				FBEF6B851B277ABB006A9BF6 /* MemeCollectionViewCell.swift */,
 				FBEF6B7F1B27789D006A9BF6 /* MemeTableController.swift */,
 				FBEF6B831B277910006A9BF6 /* MemeEditorController.swift */,
 				FBEF6B811B2778C6006A9BF6 /* MemeCollectionController.swift */,
@@ -228,6 +231,7 @@
 				FBEF6B821B2778C6006A9BF6 /* MemeCollectionController.swift in Sources */,
 				FBEF6B601B276589006A9BF6 /* ViewController.swift in Sources */,
 				FBEF6B7E1B27774A006A9BF6 /* MemeDetailController.swift in Sources */,
+				FBEF6B861B277ABB006A9BF6 /* MemeCollectionViewCell.swift in Sources */,
 				FBEF6B841B277910006A9BF6 /* MemeEditorController.swift in Sources */,
 				FBEF6B5E1B276589006A9BF6 /* AppDelegate.swift in Sources */,
 			);
