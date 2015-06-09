@@ -44,7 +44,7 @@
         <!--Sent memes-->
         <scene sceneID="3bh-nf-jhw">
             <objects>
-                <viewController id="Gv4-Lg-Ygo" sceneMemberID="viewController">
+                <viewController id="Gv4-Lg-Ygo" customClass="MemeTableController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aZF-p5-Ak9"/>
                         <viewControllerLayoutGuide type="bottom" id="1Jn-3h-dYq"/>
@@ -53,11 +53,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WGK-ak-7wn">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WGK-ak-7wn">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="exm-Bc-bbf">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeTableCell" id="exm-Bc-bbf">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="exm-Bc-bbf" id="6jw-Qf-b4Z">
@@ -70,10 +70,30 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="WGK-ak-7wn" secondAttribute="trailing" constant="-16" id="47h-9s-iFl"/>
+                            <constraint firstItem="WGK-ak-7wn" firstAttribute="bottom" secondItem="tvO-Bc-YYf" secondAttribute="bottomMargin" id="7QP-HS-Jvd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WGK-ak-7wn" secondAttribute="trailing" constant="-16" id="82T-Rf-Qff"/>
+                            <constraint firstItem="WGK-ak-7wn" firstAttribute="leading" secondItem="tvO-Bc-YYf" secondAttribute="leadingMargin" constant="-16" id="AfV-aq-Swg"/>
+                            <constraint firstItem="WGK-ak-7wn" firstAttribute="leading" secondItem="tvO-Bc-YYf" secondAttribute="leadingMargin" constant="-16" id="JxN-cK-SbU"/>
                             <constraint firstItem="1Jn-3h-dYq" firstAttribute="top" secondItem="WGK-ak-7wn" secondAttribute="bottom" id="MCS-U9-1WQ"/>
                             <constraint firstItem="WGK-ak-7wn" firstAttribute="top" secondItem="tvO-Bc-YYf" secondAttribute="topMargin" id="bIa-hO-Reu"/>
+                            <constraint firstItem="WGK-ak-7wn" firstAttribute="bottom" secondItem="tvO-Bc-YYf" secondAttribute="bottomMargin" id="i8C-Xt-rEs"/>
+                            <constraint firstItem="WGK-ak-7wn" firstAttribute="top" secondItem="tvO-Bc-YYf" secondAttribute="topMargin" id="qDg-h8-6Zr"/>
                             <constraint firstItem="WGK-ak-7wn" firstAttribute="leading" secondItem="tvO-Bc-YYf" secondAttribute="leadingMargin" constant="-16" id="uOm-8O-mP7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WGK-ak-7wn" secondAttribute="trailing" constant="-16" id="wmm-eU-cvK"/>
+                            <constraint firstItem="WGK-ak-7wn" firstAttribute="top" secondItem="tvO-Bc-YYf" secondAttribute="topMargin" id="xlV-Ee-B5R"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="47h-9s-iFl"/>
+                                <exclude reference="7QP-HS-Jvd"/>
+                                <exclude reference="82T-Rf-Qff"/>
+                                <exclude reference="JxN-cK-SbU"/>
+                                <exclude reference="bIa-hO-Reu"/>
+                                <exclude reference="uOm-8O-mP7"/>
+                                <exclude reference="xlV-Ee-B5R"/>
+                                <exclude reference="MCS-U9-1WQ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Sent memes" id="Hmd-bW-D4b"/>
                 </viewController>
@@ -84,7 +104,7 @@
         <!--Sent memes-->
         <scene sceneID="eFx-PH-BZy">
             <objects>
-                <viewController id="vCt-tO-edy" sceneMemberID="viewController">
+                <viewController id="vCt-tO-edy" customClass="MemeCollectionController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fqh-vF-ECM"/>
                         <viewControllerLayoutGuide type="bottom" id="RMz-or-KoD"/>
@@ -93,7 +113,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MgU-mP-btY">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MgU-mP-btY">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hxz-yv-ZGS">
                                     <size key="itemSize" width="50" height="50"/>
@@ -102,7 +122,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ZzD-Cg-5GB">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCollectionCell" id="ZzD-Cg-5GB">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -116,11 +136,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="MgU-mP-btY" firstAttribute="leading" secondItem="XXf-YQ-679" secondAttribute="leadingMargin" constant="-16" id="5fO-4T-nd1"/>
+                            <constraint firstItem="MgU-mP-btY" firstAttribute="bottom" secondItem="XXf-YQ-679" secondAttribute="bottomMargin" id="Bcs-Qd-YTH"/>
                             <constraint firstItem="MgU-mP-btY" firstAttribute="leading" secondItem="XXf-YQ-679" secondAttribute="leadingMargin" constant="-16" id="McE-8N-6IY"/>
                             <constraint firstItem="MgU-mP-btY" firstAttribute="top" secondItem="XXf-YQ-679" secondAttribute="topMargin" id="bYQ-X7-Bte"/>
+                            <constraint firstItem="MgU-mP-btY" firstAttribute="top" secondItem="XXf-YQ-679" secondAttribute="topMargin" id="iv9-DV-YAC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MgU-mP-btY" secondAttribute="trailing" constant="-16" id="kS9-cU-nyE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MgU-mP-btY" secondAttribute="trailing" constant="-16" id="tNy-CG-Jra"/>
                             <constraint firstItem="RMz-or-KoD" firstAttribute="top" secondItem="MgU-mP-btY" secondAttribute="bottom" id="tWN-tH-ON2"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="McE-8N-6IY"/>
+                                <exclude reference="bYQ-X7-Bte"/>
+                                <exclude reference="kS9-cU-nyE"/>
+                                <exclude reference="tWN-tH-ON2"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Sent memes" id="AxS-Ms-rv3"/>
                 </viewController>
@@ -131,7 +163,7 @@
         <!--Sent meme-->
         <scene sceneID="Hey-C0-lVB">
             <objects>
-                <viewController title="Sent meme" id="tqq-2Q-lJW" sceneMemberID="viewController">
+                <viewController title="Sent meme" id="tqq-2Q-lJW" customClass="MemeDetailController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Du-NO-P4z"/>
                         <viewControllerLayoutGuide type="bottom" id="DHG-Je-5Ui"/>
@@ -163,10 +195,10 @@
             </objects>
             <point key="canvasLocation" x="136" y="574"/>
         </scene>
-        <!--View Controller-->
+        <!--Meme Editor Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="MemeEditorController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
