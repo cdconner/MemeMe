@@ -8,7 +8,6 @@
         <!--Sent Memes-->
         <scene sceneID="TVM-Qu-uUC">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sT3-Eo-8UM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController title="Sent Memes" id="OLQ-vD-jzf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Collection" id="cjp-SL-iV1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OSo-T8-9MG">
@@ -19,6 +18,7 @@
                         <segue destination="vCt-tO-edy" kind="relationship" relationship="rootViewController" id="4rN-Qw-ib8"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sT3-Eo-8UM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136" y="1236"/>
         </scene>
@@ -135,6 +135,9 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <outlet property="memeImage" destination="FhS-Wr-r6d" id="NPW-ik-Rcf"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
