@@ -179,8 +179,22 @@
                     <view key="view" contentMode="scaleToFill" id="NDf-WM-d8V">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZGx-ny-g1Y">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZGx-ny-g1Y" firstAttribute="leading" secondItem="NDf-WM-d8V" secondAttribute="leadingMargin" constant="-16" id="DkO-jC-N7Q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZGx-ny-g1Y" secondAttribute="trailing" constant="-16" id="QHa-6I-O6v"/>
+                            <constraint firstItem="ZGx-ny-g1Y" firstAttribute="top" secondItem="NDf-WM-d8V" secondAttribute="topMargin" id="m2O-IH-ssv"/>
+                            <constraint firstItem="DHG-Je-5Ui" firstAttribute="top" secondItem="ZGx-ny-g1Y" secondAttribute="bottom" id="qCi-GF-OAG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="memeImage" destination="ZGx-ny-g1Y" id="1tN-y9-m7p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uiT-cc-Ann" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
