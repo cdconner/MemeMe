@@ -21,4 +21,20 @@ class MemeEditorController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+
+    @IBAction func shareMeme(sender: AnyObject) {
+        
+    }
+ 
+    @IBAction func cancelMeme(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func takePicture(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func useAlbumPicture(sender: AnyObject) {
+        
+    }
 }
