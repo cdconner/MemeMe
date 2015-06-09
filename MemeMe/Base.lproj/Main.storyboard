@@ -228,8 +228,66 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5UZ-Yv-Njf">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Npj-nx-4aK">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Share" id="sTL-e0-0ak"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="TuN-bj-6lS"/>
+                                    <barButtonItem title="Cancel" id="nE6-6B-lDi"/>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="568" placeholderIntrinsicHeight="60" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This is a test" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Cb2-Wk-2TD">
+                                <rect key="frame" x="16" y="84" width="568" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="568" placeholderIntrinsicHeight="60" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This is a test" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="xfe-G6-Fsd">
+                                <rect key="frame" x="16" y="456" width="568" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7QU-2f-haC">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="2tm-se-aEr"/>
+                                    <barButtonItem title="Camera" id="6OZ-PL-z9D"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="BwY-Q0-8TE"/>
+                                    <barButtonItem title="Album" id="gFh-jk-0Hk"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="a91-Ng-gMZ"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Npj-nx-4aK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="0Th-B5-eYr"/>
+                            <constraint firstItem="Cb2-Wk-2TD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="71w-jD-M6z"/>
+                            <constraint firstItem="xfe-G6-Fsd" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Cfy-wR-Oqe"/>
+                            <constraint firstItem="7QU-2f-haC" firstAttribute="top" secondItem="Npj-nx-4aK" secondAttribute="bottom" constant="512" id="IyP-ex-b7V"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5UZ-Yv-Njf" secondAttribute="trailing" constant="-16" id="JbS-S7-kWr"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="7QU-2f-haC" secondAttribute="bottom" id="MgL-vL-yhS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7QU-2f-haC" secondAttribute="trailing" constant="-16" id="P05-C5-v77"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Npj-nx-4aK" secondAttribute="trailing" constant="-16" id="TQj-zh-nS4"/>
+                            <constraint firstItem="7QU-2f-haC" firstAttribute="top" secondItem="xfe-G6-Fsd" secondAttribute="bottom" constant="40" id="UIP-46-tzh"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5UZ-Yv-Njf" secondAttribute="bottom" id="bI9-rA-PG4"/>
+                            <constraint firstItem="Cb2-Wk-2TD" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="ekP-bP-rQA"/>
+                            <constraint firstItem="5UZ-Yv-Njf" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="esz-Du-cOG"/>
+                            <constraint firstItem="7QU-2f-haC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="ffn-6C-ZTa"/>
+                            <constraint firstItem="xfe-G6-Fsd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="gHS-GV-fc4"/>
+                            <constraint firstItem="Cb2-Wk-2TD" firstAttribute="top" secondItem="Npj-nx-4aK" secondAttribute="bottom" constant="40" id="idB-da-Mfj"/>
+                            <constraint firstItem="5UZ-Yv-Njf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="sFy-mg-kyS"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Npj-nx-4aK" secondAttribute="bottom" constant="556" id="vwr-8X-qBX"/>
+                            <constraint firstItem="Npj-nx-4aK" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="wTH-Iw-pZA"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomTextField" destination="xfe-G6-Fsd" id="zST-jt-kHZ"/>
+                        <outlet property="image" destination="5UZ-Yv-Njf" id="acY-6z-Mqf"/>
+                        <outlet property="topTextField" destination="Cb2-Wk-2TD" id="A6b-aN-7fd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
