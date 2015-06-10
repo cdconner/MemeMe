@@ -27,6 +27,7 @@ class MemeEditorController: UIViewController {
  
     @IBAction func cancelMeme(sender: AnyObject) {
         //TODO: Cancel meme creation and dismiss view
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func takePicture(sender: AnyObject) {

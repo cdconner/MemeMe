@@ -24,4 +24,13 @@ class MemeTableController: UIViewController, UITableViewDataSource, UITableViewD
         
     }
 
+    @IBAction func createNewMeme(sender: AnyObject) {
+        launchMemeEditor()
+    }
+    
+    func launchMemeEditor() {
+        let editorController = self.storyboard?.instantiateViewControllerWithIdentifier("MemeEditorController") as! MemeEditorController
+        
+        self.presentViewController(editorController, animated: true, completion: nil)
+    }
 }
