@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MemeEditorController: UIViewController, UITextFieldDelegate {
+class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
@@ -51,7 +51,7 @@ class MemeEditorController: UIViewController, UITextFieldDelegate {
 
     }
     
-
+    //MARK: Buttons actions
 
     @IBAction func shareMeme(sender: AnyObject) {
         //TODO: Share Meme
@@ -67,6 +67,15 @@ class MemeEditorController: UIViewController, UITextFieldDelegate {
     
     @IBAction func useAlbumPicture(sender: AnyObject) {
         //TODO: Pick picture from album and place in Meme
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        self.presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    //MARK: Image picker response
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+        image.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     //MARK: Text field functions
@@ -82,13 +91,17 @@ class MemeEditorController: UIViewController, UITextFieldDelegate {
     //MARK: Keyboard show and hide
     func keyboardWillShow( notification: NSNotification ) {
         if( bottomTextField.isFirstResponder() ) {
-            self.view.frame.origin.y -= getKeyboardHeight(notification)
+            print("Show: \(self.view.frame.origin.y) -> ")
+            self.view.frame.origin.y = -getKeyboardHeight(notification)
+            print("\(self.view.frame.origin.y)\n")
         }
     }
     
     func keyboardWillHide( notification: NSNotification ) {
         if( bottomTextField.isFirstResponder() ) {
-            self.view.frame.origin.y += getKeyboardHeight(notification)
+            print("Hide: \(self.view.frame.origin.y) -> ")
+            self.view.frame.origin.y = 0
+            print("\(self.view.frame.origin.y)\n")
         }
     }
     
