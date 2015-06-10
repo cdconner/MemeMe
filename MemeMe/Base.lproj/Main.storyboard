@@ -100,7 +100,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Sent memes" id="Hmd-bW-D4b">
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="0XV-uz-A3T">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0XV-uz-A3T">
                             <connections>
                                 <action selector="createNewMeme:" destination="Gv4-Lg-Ygo" id="rCa-1e-JuE"/>
                             </connections>
@@ -173,7 +173,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Sent memes" id="AxS-Ms-rv3">
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="mqz-YX-dh0"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mqz-YX-dh0"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fsd-XV-zsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
