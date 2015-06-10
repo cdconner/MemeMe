@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MemeEditorController: UIViewController {
+class MemeEditorController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
@@ -17,8 +17,19 @@ class MemeEditorController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         //TODO: Stylize text fields to match meme look
+        let memeTextAttributes = [
+            NSStrokeColorAttributeName : UIColor.blackColor(),
+            NSForegroundColorAttributeName : UIColor.whiteColor(),
+            NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 48)!,
+            NSStrokeWidthAttributeName : 1.0,
+        ]
+        
+        topTextField.defaultTextAttributes = memeTextAttributes
+        topTextField.textAlignment = NSTextAlignment.Center
+        bottomTextField.defaultTextAttributes = memeTextAttributes
+        bottomTextField.textAlignment = NSTextAlignment.Center
     }
 
     @IBAction func shareMeme(sender: AnyObject) {
@@ -26,7 +37,6 @@ class MemeEditorController: UIViewController {
     }
  
     @IBAction func cancelMeme(sender: AnyObject) {
-        //TODO: Cancel meme creation and dismiss view
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -36,5 +46,10 @@ class MemeEditorController: UIViewController {
     
     @IBAction func useAlbumPicture(sender: AnyObject) {
         //TODO: Pick picture from album and place in Meme
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

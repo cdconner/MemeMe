@@ -263,21 +263,27 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="nKi-3M-57v"/>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="TOP" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Hii-V1-KUH">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="TOP" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Hii-V1-KUH">
                                 <rect key="frame" x="16" y="104" width="568" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="D7P-2H-UpA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BJf-XB-soI" id="kty-uI-gpn"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="BOTTOM" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="c09-yZ-LS3">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="BOTTOM" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="c09-yZ-LS3">
                                 <rect key="frame" x="16" y="444" width="568" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="kBM-IC-Gas"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BJf-XB-soI" id="SMD-bf-xC7"/>
+                                </connections>
                             </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yh8-JG-Yvb">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
