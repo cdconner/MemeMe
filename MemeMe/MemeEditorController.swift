@@ -24,19 +24,13 @@ class MemeEditorController: UIViewController, UITextFieldDelegate {
             NSStrokeColorAttributeName : UIColor.blackColor(),
             NSForegroundColorAttributeName : UIColor.whiteColor(),
             NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 48)!,
-            NSStrokeWidthAttributeName : 1.0,
+            NSStrokeWidthAttributeName : -1.0
         ]
-        
+
         topTextField.defaultTextAttributes = memeTextAttributes
         topTextField.textAlignment = NSTextAlignment.Center
         bottomTextField.defaultTextAttributes = memeTextAttributes
         bottomTextField.textAlignment = NSTextAlignment.Center
-        
-//        //MARK: Bar button styles
-//        let shareButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: nil, action: nil)
-//        let spacer = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
-//        let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: nil, action: nil)
-//        self.topBar.setItems([shareButton, spacer, cancelButton], animated: true)
     }
     
 
