@@ -94,6 +94,25 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
         textField.placeholder = ""
     }
     
+    //MARK: Make meme
+    func generateMemedImage() -> UIImage{
+        topBar.hidden = true
+        bottomBar.hidden = true
+        
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        
+        self.view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
+        let memedImage : UIImage =
+        UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        topBar.hidden = false
+        bottomBar.hidden = false
+        
+        return memedImage
+    }
+    
+    
     //MARK: Keyboard show and hide
     func keyboardWillShow( notification: NSNotification ) {
         if( bottomTextField.isFirstResponder() ) {
@@ -116,4 +135,6 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
         let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue
         return keyboardSize.CGRectValue().height
     }
+    
+    
 }
