@@ -13,12 +13,13 @@ class MemeEditorController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
     @IBOutlet weak var image: UIImageView!
-    
+    @IBOutlet weak var topBar: UIToolbar!
+    @IBOutlet weak var bottomBar: UIToolbar!
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
-        //TODO: Stylize text fields to match meme look
+        //MARK: text field styles
         let memeTextAttributes = [
             NSStrokeColorAttributeName : UIColor.blackColor(),
             NSForegroundColorAttributeName : UIColor.whiteColor(),
@@ -30,7 +31,15 @@ class MemeEditorController: UIViewController, UITextFieldDelegate {
         topTextField.textAlignment = NSTextAlignment.Center
         bottomTextField.defaultTextAttributes = memeTextAttributes
         bottomTextField.textAlignment = NSTextAlignment.Center
+        
+//        //MARK: Bar button styles
+//        let shareButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: nil, action: nil)
+//        let spacer = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+//        let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: nil, action: nil)
+//        self.topBar.setItems([shareButton, spacer, cancelButton], animated: true)
     }
+    
+
 
     @IBAction func shareMeme(sender: AnyObject) {
         //TODO: Share Meme
