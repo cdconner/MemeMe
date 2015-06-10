@@ -341,7 +341,8 @@
                     <connections>
                         <outlet property="bottomBar" destination="SM4-sD-NF5" id="CHb-OX-MIS"/>
                         <outlet property="bottomTextField" destination="qL9-aP-7he" id="pWT-Ik-uqc"/>
-                        <outlet property="image" destination="Kx6-D9-3h3" id="hWa-Cr-gJJ"/>
+                        <outlet property="cameraButton" destination="ioP-44-waL" id="jZb-JR-rvx"/>
+                        <outlet property="imageView" destination="Kx6-D9-3h3" id="1IX-pN-C5Q"/>
                         <outlet property="shareButton" destination="PW1-eI-zMO" id="Fbt-by-CnR"/>
                         <outlet property="topBar" destination="Yh8-JG-Yvb" id="fuy-AU-8vv"/>
                         <outlet property="topTextField" destination="6Db-vC-aC6" id="go1-3Z-n7h"/>

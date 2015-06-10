@@ -12,15 +12,19 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
 
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
-    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
+    
     @IBOutlet weak var topBar: UIToolbar!
     @IBOutlet weak var bottomBar: UIToolbar!
-    @IBOutlet weak var shareButton: UIBarButtonItem!
     
+    @IBOutlet weak var shareButton: UIBarButtonItem!
+    @IBOutlet weak var cameraButton: UIBarButtonItem!
+
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
-        shareButton.enabled = (image.image != nil)
+        shareButton.enabled = (imageView.image != nil)
+        cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         
         //MARK: Text field styles
         let memeTextAttributes = [
@@ -62,19 +66,21 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
     }
     
     @IBAction func takePicture(sender: AnyObject) {
-        //TODO: Take picture and place in meme
-    }
-    
-    @IBAction func useAlbumPicture(sender: AnyObject) {
-        //TODO: Pick picture from album and place in Meme
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+        self.presentViewController(imagePicker, animated: true, completion: nil)    }
+    
+    @IBAction func useAlbumPicture(sender: AnyObject) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         self.presentViewController(imagePicker, animated: true, completion: nil)
     }
     
     //MARK: Image picker response
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-        image.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
