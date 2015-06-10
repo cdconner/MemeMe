@@ -15,10 +15,13 @@ class MemeEditorController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var topBar: UIToolbar!
     @IBOutlet weak var bottomBar: UIToolbar!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
+        shareButton.enabled = (image.image != nil)
+        
         //MARK: Text field styles
         let memeTextAttributes = [
             NSStrokeColorAttributeName : UIColor.blackColor(),
@@ -44,6 +47,8 @@ class MemeEditorController: UIViewController, UITextFieldDelegate {
             selector: "keyboardWillHide:",
             name: UIKeyboardWillHideNotification,
             object: nil)
+        
+
     }
     
 

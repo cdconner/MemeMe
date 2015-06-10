@@ -241,7 +241,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kx6-D9-3h3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kx6-D9-3h3">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
@@ -304,6 +304,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kx6-D9-3h3" secondAttribute="trailing" constant="-16" id="09f-wW-Nwj"/>
                             <constraint firstItem="6Db-vC-aC6" firstAttribute="top" secondItem="Yh8-JG-Yvb" secondAttribute="bottom" constant="30" id="1oI-oo-UJ0"/>
                             <constraint firstItem="Kx6-D9-3h3" firstAttribute="top" secondItem="XK0-rp-Ew9" secondAttribute="bottom" id="47P-30-3Lp"/>
                             <constraint firstItem="Hao-tC-jf6" firstAttribute="top" secondItem="Kx6-D9-3h3" secondAttribute="bottom" id="5MZ-Xg-Q50"/>
@@ -341,6 +342,7 @@
                         <outlet property="bottomBar" destination="SM4-sD-NF5" id="CHb-OX-MIS"/>
                         <outlet property="bottomTextField" destination="qL9-aP-7he" id="pWT-Ik-uqc"/>
                         <outlet property="image" destination="Kx6-D9-3h3" id="hWa-Cr-gJJ"/>
+                        <outlet property="shareButton" destination="PW1-eI-zMO" id="Fbt-by-CnR"/>
                         <outlet property="topBar" destination="Yh8-JG-Yvb" id="fuy-AU-8vv"/>
                         <outlet property="topTextField" destination="6Db-vC-aC6" id="go1-3Z-n7h"/>
                     </connections>
