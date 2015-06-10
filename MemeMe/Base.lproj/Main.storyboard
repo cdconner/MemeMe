@@ -241,7 +241,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Default" translatesAutoresizingMaskIntoConstraints="NO" id="Kx6-D9-3h3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kx6-D9-3h3">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
@@ -285,7 +285,7 @@
                                     <constraint firstAttribute="height" constant="72" id="Iqp-dZ-hPW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="BJf-XB-soI" id="cj5-DU-5cF"/>
                                 </connections>
@@ -296,7 +296,7 @@
                                     <constraint firstAttribute="height" constant="72" id="zIs-gC-Ed6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
                                 <connections>
                                     <outlet property="delegate" destination="BJf-XB-soI" id="WlH-1r-Nsb"/>
                                 </connections>
@@ -350,7 +350,4 @@
             <point key="canvasLocation" x="-684" y="187"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Default" width="750" height="1334"/>
-    </resources>
 </document>
