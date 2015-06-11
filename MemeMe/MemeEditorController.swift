@@ -97,6 +97,11 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
     }
     
     //MARK: Make meme
+    func save() {
+        var meme = Meme()
+        
+    }
+    
     func generateMemedImage() -> UIImage{
         topBar.hidden = true
         bottomBar.hidden = true
