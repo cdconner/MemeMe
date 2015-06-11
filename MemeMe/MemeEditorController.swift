@@ -58,8 +58,8 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
     //MARK: Buttons actions
 
     @IBAction func shareMeme(sender: AnyObject) {
-        let memedImage = generateMemedImage()
-        let activityController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
+        let meme = save()
+        let activityController = UIActivityViewController(activityItems: [meme.memedImage!], applicationActivities: nil)
         self.presentViewController(activityController, animated: true, completion: nil )
     }
  
@@ -97,9 +97,13 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
     }
     
     //MARK: Make meme
-    func save() {
-        var meme = Meme()
+    func save() -> Meme {
+        var meme = Meme(topText: topTextField.text, bottomText: bottomTextField.text, originalImage: imageView.image!, memedImage: generateMemedImage())
         
+        var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.memes.append(meme)
+        
+        return meme
     }
     
     func generateMemedImage() -> UIImage{
@@ -109,8 +113,7 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
         UIGraphicsBeginImageContext(self.view.frame.size)
         
         self.view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
-        let memedImage : UIImage =
-        UIGraphicsGetImageFromCurrentImageContext()
+        let memedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
         topBar.hidden = false
