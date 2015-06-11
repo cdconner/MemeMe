@@ -58,7 +58,9 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
     //MARK: Buttons actions
 
     @IBAction func shareMeme(sender: AnyObject) {
-        //TODO: Share Meme
+        let memedImage = generateMemedImage()
+        let activityController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
+        self.presentViewController(activityController, animated: true, completion: nil )
     }
  
     @IBAction func cancelMeme(sender: AnyObject) {
@@ -111,7 +113,6 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
         
         return memedImage
     }
-    
     
     //MARK: Keyboard show and hide
     func keyboardWillShow( notification: NSNotification ) {
