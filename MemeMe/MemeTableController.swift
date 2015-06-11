@@ -9,6 +9,13 @@
 import UIKit
 
 class MemeTableController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    override func viewDidLoad() {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        if( appDelegate.memes.count == 0 ) {
+            launchMemeEditor()
+        }
+    }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
