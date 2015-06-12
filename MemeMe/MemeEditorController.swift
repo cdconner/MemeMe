@@ -51,16 +51,25 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
             selector: "keyboardWillHide:",
             name: UIKeyboardWillHideNotification,
             object: nil)
-        
-
     }
     
     //MARK: Buttons actions
 
     @IBAction func shareMeme(sender: AnyObject) {
-        let meme = save()
-        let activityController = UIActivityViewController(activityItems: [meme.memedImage!], applicationActivities: nil)
-        self.presentViewController(activityController, animated: true, completion: nil )
+        let memedImage = generateMemedImage()
+        
+        let activityController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
+        
+        activityController.completionWithItemsHandler = { (
+            activityType: String!,
+            completed: Bool,
+            returnedItems: [AnyObject]!,
+            activityError: NSError!) -> Void in
+                self.save()
+                self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
+        self.presentViewController( activityController, animated: true, completion: nil )
     }
  
     @IBAction func cancelMeme(sender: AnyObject) {
@@ -96,14 +105,13 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
         textField.placeholder = ""
     }
     
-    //MARK: Make meme
-    func save() -> Meme {
+    //MARK: Save meme
+    func save() {
+        println("Saved!")
         var meme = Meme(topText: topTextField.text, bottomText: bottomTextField.text, originalImage: imageView.image!, memedImage: generateMemedImage())
         
         var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.memes.append(meme)
-        
-        return meme
     }
     
     func generateMemedImage() -> UIImage{
@@ -120,6 +128,13 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
         bottomBar.hidden = false
         
         return memedImage
+    }
+    
+    func finishEditingMeme() {
+        println("Complete.")
+        save()
+        //self.dismissViewControllerAnimated(true, completion: nil)
+        //self.dismissViewControllerAnimated(false, completion: nil)
     }
     
     //MARK: Keyboard show and hide

@@ -31,8 +31,6 @@ class MemeTableController: UIViewController, UITableViewDataSource, UITableViewD
         //If you don't reload the table it won't see any changes!
         self.tableView.reloadData()
     }
-    
-    
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.memes.count
@@ -50,8 +48,6 @@ class MemeTableController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        
         let detailController = self.storyboard?.instantiateViewControllerWithIdentifier("MemeDetailController") as! MemeDetailController
         
         detailController.meme = memes[indexPath.row]
