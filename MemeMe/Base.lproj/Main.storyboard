@@ -66,7 +66,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v4B-bN-epa">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -194,7 +194,7 @@
         <!--Sent meme-->
         <scene sceneID="Hey-C0-lVB">
             <objects>
-                <viewController title="Sent meme" id="tqq-2Q-lJW" customClass="MemeDetailController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeDetailController" title="Sent meme" id="tqq-2Q-lJW" customClass="MemeDetailController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Du-NO-P4z"/>
                         <viewControllerLayoutGuide type="bottom" id="DHG-Je-5Ui"/>
@@ -203,20 +203,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZGx-ny-g1Y">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZGx-ny-g1Y">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nNs-PX-L6h">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="RVW-Lx-AZT"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ZGx-ny-g1Y" firstAttribute="top" secondItem="nNs-PX-L6h" secondAttribute="bottom" id="4or-TJ-dON"/>
+                            <constraint firstItem="nNs-PX-L6h" firstAttribute="leading" secondItem="NDf-WM-d8V" secondAttribute="leadingMargin" constant="-16" id="D9S-GU-YXw"/>
                             <constraint firstItem="ZGx-ny-g1Y" firstAttribute="leading" secondItem="NDf-WM-d8V" secondAttribute="leadingMargin" constant="-16" id="DkO-jC-N7Q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nNs-PX-L6h" secondAttribute="trailing" constant="-16" id="HJ8-Hi-61C"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZGx-ny-g1Y" secondAttribute="trailing" constant="-16" id="QHa-6I-O6v"/>
                             <constraint firstItem="ZGx-ny-g1Y" firstAttribute="top" secondItem="NDf-WM-d8V" secondAttribute="topMargin" id="m2O-IH-ssv"/>
+                            <constraint firstItem="nNs-PX-L6h" firstAttribute="top" secondItem="8Du-NO-P4z" secondAttribute="bottom" id="m7N-u6-Llk"/>
                             <constraint firstItem="DHG-Je-5Ui" firstAttribute="top" secondItem="ZGx-ny-g1Y" secondAttribute="bottom" id="qCi-GF-OAG"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="m2O-IH-ssv"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
-                        <outlet property="memeImage" destination="ZGx-ny-g1Y" id="1tN-y9-m7p"/>
+                        <outlet property="imageView" destination="ZGx-ny-g1Y" id="T3T-5w-bZq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uiT-cc-Ann" userLabel="First Responder" sceneMemberID="firstResponder"/>
