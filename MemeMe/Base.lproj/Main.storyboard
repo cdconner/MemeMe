@@ -137,30 +137,59 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MgU-mP-btY">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hxz-yv-ZGS">
-                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="itemSize" width="120" height="120"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCollectionCell" id="ZzD-Cg-5GB" customClass="MemeCollectionViewCell" customModule="MemeMe" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCollectionViewCell" id="ZzD-Cg-5GB" customClass="MemeCollectionViewCell" customModule="MemeMe" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FhS-Wr-r6d">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="03F-xy-5k9">
+                                                    <rect key="frame" x="8" y="8" width="104" height="104"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="03F-xy-5k9" firstAttribute="bottom" secondItem="ZzD-Cg-5GB" secondAttribute="bottomMargin" id="8dP-tb-Lew"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="03F-xy-5k9" secondAttribute="bottom" constant="-8" id="A94-6n-Sf5"/>
+                                            <constraint firstItem="03F-xy-5k9" firstAttribute="top" secondItem="ZzD-Cg-5GB" secondAttribute="topMargin" constant="-8" id="LWZ-q3-Bdc"/>
+                                            <constraint firstItem="03F-xy-5k9" firstAttribute="trailing" secondItem="ZzD-Cg-5GB" secondAttribute="trailingMargin" id="Yk7-Lt-O7C"/>
+                                            <constraint firstItem="03F-xy-5k9" firstAttribute="leading" secondItem="ZzD-Cg-5GB" secondAttribute="leadingMargin" id="dYW-fY-49n"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="03F-xy-5k9" secondAttribute="trailing" constant="-8" id="fTB-vl-wF9"/>
+                                            <constraint firstItem="03F-xy-5k9" firstAttribute="leading" secondItem="ZzD-Cg-5GB" secondAttribute="leadingMargin" constant="-8" id="fwC-Sl-I6j"/>
+                                            <constraint firstItem="03F-xy-5k9" firstAttribute="trailing" secondItem="ZzD-Cg-5GB" secondAttribute="trailingMargin" id="hSW-0F-xO2"/>
+                                            <constraint firstItem="03F-xy-5k9" firstAttribute="leading" secondItem="ZzD-Cg-5GB" secondAttribute="leadingMargin" id="jN7-w2-qGP"/>
+                                            <constraint firstItem="03F-xy-5k9" firstAttribute="top" secondItem="ZzD-Cg-5GB" secondAttribute="topMargin" id="jtO-7F-wiP"/>
+                                            <constraint firstItem="03F-xy-5k9" firstAttribute="top" secondItem="ZzD-Cg-5GB" secondAttribute="topMargin" id="mxs-Vs-V54"/>
+                                            <constraint firstItem="03F-xy-5k9" firstAttribute="bottom" secondItem="ZzD-Cg-5GB" secondAttribute="bottomMargin" id="zxW-b7-T06"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="8dP-tb-Lew"/>
+                                                <exclude reference="A94-6n-Sf5"/>
+                                                <exclude reference="LWZ-q3-Bdc"/>
+                                                <exclude reference="fTB-vl-wF9"/>
+                                                <exclude reference="fwC-Sl-I6j"/>
+                                                <exclude reference="hSW-0F-xO2"/>
+                                                <exclude reference="jN7-w2-qGP"/>
+                                                <exclude reference="mxs-Vs-V54"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
-                                            <outlet property="memeImage" destination="FhS-Wr-r6d" id="NPW-ik-Rcf"/>
+                                            <outlet property="memeImage" destination="03F-xy-5k9" id="znG-hX-pV8"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="vCt-tO-edy" id="D7c-8l-Rt1"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -186,6 +215,9 @@
                     <navigationItem key="navigationItem" title="Sent memes" id="AxS-Ms-rv3">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="mqz-YX-dh0"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="MgU-mP-btY" id="vCe-2J-yYy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fsd-XV-zsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
