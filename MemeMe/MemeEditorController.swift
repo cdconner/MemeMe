@@ -107,7 +107,6 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     //MARK: Save meme
     func save() {
-        println("Saved!")
         var meme = Meme(topText: topTextField.text, bottomText: bottomTextField.text, originalImage: imageView.image!, memedImage: generateMemedImage())
         
         var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -128,13 +127,6 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
         bottomBar.hidden = false
         
         return memedImage
-    }
-    
-    func finishEditingMeme() {
-        println("Complete.")
-        save()
-        //self.dismissViewControllerAnimated(true, completion: nil)
-        //self.dismissViewControllerAnimated(false, completion: nil)
     }
     
     //MARK: Keyboard show and hide
