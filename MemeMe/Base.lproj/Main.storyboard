@@ -9,7 +9,7 @@
         <scene sceneID="TVM-Qu-uUC">
             <objects>
                 <navigationController title="Sent Memes" id="OLQ-vD-jzf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Collection" id="cjp-SL-iV1"/>
+                    <tabBarItem key="tabBarItem" title="Grid" image="Grid icon" id="cjp-SL-iV1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OSo-T8-9MG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -242,7 +242,7 @@
         <scene sceneID="q68-G9-SyJ">
             <objects>
                 <navigationController title="Sent Memes" id="8CK-Co-xtc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Table" id="YX4-Mo-X8V"/>
+                    <tabBarItem key="tabBarItem" title="List" image="List icon" id="YX4-Mo-X8V"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="22A-yc-XKh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -379,4 +379,8 @@
             <point key="canvasLocation" x="-684" y="187"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Grid icon" width="30" height="30"/>
+        <image name="List icon" width="30" height="30"/>
+    </resources>
 </document>
