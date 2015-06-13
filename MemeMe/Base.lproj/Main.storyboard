@@ -366,14 +366,18 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Kx6-D9-3h3" secondAttribute="trailing" constant="-16" id="09f-wW-Nwj"/>
                             <constraint firstItem="Kx6-D9-3h3" firstAttribute="top" secondItem="XK0-rp-Ew9" secondAttribute="bottom" constant="-20" id="47P-30-3Lp"/>
                             <constraint firstItem="Hao-tC-jf6" firstAttribute="top" secondItem="Kx6-D9-3h3" secondAttribute="bottom" id="5MZ-Xg-Q50"/>
+                            <constraint firstItem="Kx6-D9-3h3" firstAttribute="top" secondItem="lG5-Id-CbR" secondAttribute="topMargin" id="BhY-21-pdR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SM4-sD-NF5" secondAttribute="trailing" constant="-16" id="CtO-70-OCs"/>
                             <constraint firstItem="qL9-aP-7he" firstAttribute="leading" secondItem="lG5-Id-CbR" secondAttribute="leadingMargin" id="Dyl-dE-rp7"/>
                             <constraint firstItem="6Db-vC-aC6" firstAttribute="trailing" secondItem="lG5-Id-CbR" secondAttribute="trailingMargin" id="EjB-um-jpu"/>
                             <constraint firstItem="Kx6-D9-3h3" firstAttribute="top" secondItem="lG5-Id-CbR" secondAttribute="topMargin" id="HBl-kh-7r9"/>
+                            <constraint firstItem="Kx6-D9-3h3" firstAttribute="leading" secondItem="lG5-Id-CbR" secondAttribute="leadingMargin" constant="-16" id="LFb-2w-mGV"/>
                             <constraint firstItem="SM4-sD-NF5" firstAttribute="leading" secondItem="lG5-Id-CbR" secondAttribute="leadingMargin" constant="-16" id="OUB-bC-MHv"/>
                             <constraint firstItem="Hao-tC-jf6" firstAttribute="top" secondItem="SM4-sD-NF5" secondAttribute="bottom" id="Phk-lZ-ylU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kx6-D9-3h3" secondAttribute="trailing" constant="-16" id="RZ9-h6-VQe"/>
                             <constraint firstItem="Kx6-D9-3h3" firstAttribute="leading" secondItem="lG5-Id-CbR" secondAttribute="leadingMargin" constant="-16" id="UWr-Sa-7xB"/>
                             <constraint firstItem="SM4-sD-NF5" firstAttribute="top" secondItem="qL9-aP-7he" secondAttribute="bottom" constant="30" id="nes-Xf-FGf"/>
+                            <constraint firstItem="Hao-tC-jf6" firstAttribute="top" secondItem="Kx6-D9-3h3" secondAttribute="bottom" id="oTm-Bl-LPv"/>
                             <constraint firstItem="qL9-aP-7he" firstAttribute="trailing" secondItem="lG5-Id-CbR" secondAttribute="trailingMargin" id="t9N-z5-S8y"/>
                             <constraint firstItem="6Db-vC-aC6" firstAttribute="top" secondItem="XK0-rp-Ew9" secondAttribute="bottom" constant="50" id="tAV-Ul-G0a"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Kx6-D9-3h3" secondAttribute="trailing" constant="-16" id="vXN-bT-g3e"/>
@@ -382,9 +386,13 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="09f-wW-Nwj"/>
                                 <exclude reference="47P-30-3Lp"/>
+                                <exclude reference="HBl-kh-7r9"/>
+                                <exclude reference="UWr-Sa-7xB"/>
                                 <exclude reference="vXN-bT-g3e"/>
                                 <exclude reference="xfM-oQ-U9K"/>
+                                <exclude reference="5MZ-Xg-Q50"/>
                             </mask>
                         </variation>
                     </view>

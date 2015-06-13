@@ -38,6 +38,7 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
         shareButton.enabled = (imageView.image != nil)
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         
+        
         //MARK: Text field styles
         let memeTextAttributes = [
             NSStrokeColorAttributeName : UIColor.blackColor(),
