@@ -30,7 +30,7 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
             NSStrokeColorAttributeName : UIColor.blackColor(),
             NSForegroundColorAttributeName : UIColor.whiteColor(),
             //NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 48)!,
-            NSFontAttributeName : UIFont(name: "Impact", size: 72)!,
+            NSFontAttributeName : UIFont(name: "Impact", size: 84)!,
             NSStrokeWidthAttributeName : -2.0
         ]
 

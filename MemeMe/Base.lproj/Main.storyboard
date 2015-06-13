@@ -136,6 +136,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MgU-mP-btY">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="hxz-yv-ZGS">
                                     <size key="itemSize" width="120" height="120"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -240,18 +241,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZGx-ny-g1Y">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZGx-ny-g1Y">
+                                <rect key="frame" x="0.0" y="36" width="600" height="548"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZGx-ny-g1Y" firstAttribute="leading" secondItem="NDf-WM-d8V" secondAttribute="leadingMargin" constant="-16" id="DkO-jC-N7Q"/>
-                            <constraint firstItem="ZGx-ny-g1Y" firstAttribute="top" secondItem="8Du-NO-P4z" secondAttribute="bottom" id="OKP-GL-WBc"/>
+                            <constraint firstItem="ZGx-ny-g1Y" firstAttribute="top" secondItem="8Du-NO-P4z" secondAttribute="bottom" constant="16" id="OKP-GL-WBc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZGx-ny-g1Y" secondAttribute="trailing" constant="-16" id="QHa-6I-O6v"/>
                             <constraint firstItem="ZGx-ny-g1Y" firstAttribute="top" secondItem="NDf-WM-d8V" secondAttribute="topMargin" id="kdp-QY-daS"/>
                             <constraint firstItem="ZGx-ny-g1Y" firstAttribute="top" secondItem="NDf-WM-d8V" secondAttribute="topMargin" id="m2O-IH-ssv"/>
-                            <constraint firstItem="DHG-Je-5Ui" firstAttribute="top" secondItem="ZGx-ny-g1Y" secondAttribute="bottom" id="qCi-GF-OAG"/>
+                            <constraint firstItem="DHG-Je-5Ui" firstAttribute="top" secondItem="ZGx-ny-g1Y" secondAttribute="bottom" constant="16" id="qCi-GF-OAG"/>
                             <constraint firstItem="ZGx-ny-g1Y" firstAttribute="top" secondItem="NDf-WM-d8V" secondAttribute="topMargin" id="vox-wf-DHw"/>
                         </constraints>
                         <variation key="default">
@@ -314,17 +315,6 @@
                                     <outlet property="delegate" destination="BJf-XB-soI" id="WlH-1r-Nsb"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Db-vC-aC6">
-                                <rect key="frame" x="16" y="60" width="568" height="72"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="72" id="Iqp-dZ-hPW"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BJf-XB-soI" id="cj5-DU-5cF"/>
-                                </connections>
-                            </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SM4-sD-NF5">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
@@ -353,6 +343,17 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Db-vC-aC6">
+                                <rect key="frame" x="16" y="70" width="568" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="Iqp-dZ-hPW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BJf-XB-soI" id="cj5-DU-5cF"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -368,7 +369,7 @@
                             <constraint firstItem="Kx6-D9-3h3" firstAttribute="leading" secondItem="lG5-Id-CbR" secondAttribute="leadingMargin" constant="-16" id="UWr-Sa-7xB"/>
                             <constraint firstItem="SM4-sD-NF5" firstAttribute="top" secondItem="qL9-aP-7he" secondAttribute="bottom" constant="30" id="nes-Xf-FGf"/>
                             <constraint firstItem="qL9-aP-7he" firstAttribute="trailing" secondItem="lG5-Id-CbR" secondAttribute="trailingMargin" id="t9N-z5-S8y"/>
-                            <constraint firstItem="6Db-vC-aC6" firstAttribute="top" secondItem="XK0-rp-Ew9" secondAttribute="bottom" constant="40" id="tAV-Ul-G0a"/>
+                            <constraint firstItem="6Db-vC-aC6" firstAttribute="top" secondItem="XK0-rp-Ew9" secondAttribute="bottom" constant="50" id="tAV-Ul-G0a"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Kx6-D9-3h3" secondAttribute="trailing" constant="-16" id="vXN-bT-g3e"/>
                             <constraint firstItem="6Db-vC-aC6" firstAttribute="leading" secondItem="lG5-Id-CbR" secondAttribute="leadingMargin" id="vpf-5W-VNR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SM4-sD-NF5" secondAttribute="trailing" constant="-16" id="xfM-oQ-U9K"/>
