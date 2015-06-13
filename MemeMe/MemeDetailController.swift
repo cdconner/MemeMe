@@ -25,17 +25,25 @@ class MemeDetailController: UIViewController {
         
         if let navigationController = self.navigationController {
             let editButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Edit, target: self, action: "launchMemeEditor")
-            self.navigationItem.rightBarButtonItem = editButton
+            let deleteButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Trash, target: self, action: "deleteMeme")
+            self.navigationItem.rightBarButtonItems = [editButton, deleteButton]
+            //self.navigationItem.rightBarButtonItem = editButton
         }
     }
     
     func launchMemeEditor() {
         let editorController = self.storyboard?.instantiateViewControllerWithIdentifier("MemeEditorController") as! MemeEditorController
-        println("\(meme.topText) \(meme.bottomText)")
         
         editorController.memeIndex = self.memeIndex
         editorController.meme = meme
         
         self.presentViewController(editorController, animated: true, completion: nil )
+    }
+    
+    func deleteMeme() {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.memes.removeAtIndex(self.memeIndex)
+        println("La la la deleting \(self.memeIndex)")
+        self.navigationController?.popViewControllerAnimated(true)
     }
 }
