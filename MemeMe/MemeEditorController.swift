@@ -29,7 +29,6 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
         let memeTextAttributes = [
             NSStrokeColorAttributeName : UIColor.blackColor(),
             NSForegroundColorAttributeName : UIColor.whiteColor(),
-            //NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 48)!,
             NSFontAttributeName : UIFont(name: "Impact", size: 84)!,
             NSStrokeWidthAttributeName : -2.0
         ]
@@ -130,17 +129,13 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
     //MARK: Keyboard show and hide
     func keyboardWillShow( notification: NSNotification ) {
         if( bottomTextField.isFirstResponder() ) {
-            print("Show: \(self.view.frame.origin.y) -> ")
             self.view.frame.origin.y = -getKeyboardHeight(notification)
-            print("\(self.view.frame.origin.y)\n")
         }
     }
     
     func keyboardWillHide( notification: NSNotification ) {
         if( bottomTextField.isFirstResponder() ) {
-            print("Hide: \(self.view.frame.origin.y) -> ")
             self.view.frame.origin.y = 0
-            print("\(self.view.frame.origin.y)\n")
         }
     }
     
