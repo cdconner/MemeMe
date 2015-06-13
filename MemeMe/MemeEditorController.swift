@@ -115,7 +115,7 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
         textField.placeholder = ""
     }
     
-    //MARK: Save meme
+    //MARK: Save new meme
     func save() {
         self.meme = Meme(topText: topTextField.text, bottomText: bottomTextField.text, originalImage: imageView.image!, memedImage: generateMemedImage())
         
@@ -129,7 +129,6 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
 
         topTextField.resignFirstResponder()
         bottomTextField.resignFirstResponder()
-
         bottomBar.hidden = true
         
         UIGraphicsBeginImageContext(self.view.frame.size)

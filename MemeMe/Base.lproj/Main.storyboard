@@ -311,9 +311,9 @@
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qL9-aP-7he">
-                                <rect key="frame" x="16" y="454" width="568" height="72"/>
+                                <rect key="frame" x="16" y="442" width="568" height="84"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="72" id="zIs-gC-Ed6"/>
+                                    <constraint firstAttribute="height" constant="84" id="zIs-gC-Ed6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
@@ -350,9 +350,9 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Db-vC-aC6">
-                                <rect key="frame" x="16" y="70" width="568" height="72"/>
+                                <rect key="frame" x="16" y="70" width="568" height="84"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="72" id="Iqp-dZ-hPW"/>
+                                    <constraint firstAttribute="height" constant="84" id="Iqp-dZ-hPW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>

@@ -42,6 +42,11 @@ class MemeTableController: UIViewController, UITableViewDataSource, UITableViewD
         let meme = memes[indexPath.row]
         
         cell.textLabel?.text = "\(meme.topText) \(meme.bottomText)"
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MMMM d, yyyy, h:mm a"
+        cell.detailTextLabel?.text = "Created \(dateFormatter.stringFromDate(meme.created))"
+        
         cell.imageView?.image = meme.memedImage
         
         return cell

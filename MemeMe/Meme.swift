@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 struct Meme {
+    let created = NSDate()
     var topText: String = ""
     var bottomText: String = ""
     var originalImage: UIImage?
