@@ -10,11 +10,23 @@ import Foundation
 import UIKit
 
 struct Meme {
-    let created = NSDate()
     var topText: String = ""
     var bottomText: String = ""
     var originalImage: UIImage?
     var memedImage: UIImage?
+    let dateCreated = NSDate()
+    var dateCreatedString: String {
+        let dateFormatter = NSDateFormatter()
+        
+        if( self.dateCreated.timeIntervalSinceNow < (60*60*24) ){
+            dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        } else {
+            dateFormatter.dateStyle = NSDateFormatterStyle.LongStyle
+        }
+ 
+        dateFormatter.doesRelativeDateFormatting = true
+        return dateFormatter.stringFromDate(self.dateCreated)
+    }
     
     init(topText: String, bottomText: String, originalImage: UIImage, memedImage: UIImage) {
         self.topText = topText
