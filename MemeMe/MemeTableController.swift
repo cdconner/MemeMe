@@ -42,7 +42,7 @@ class MemeTableController: UIViewController, UITableViewDataSource, UITableViewD
         let meme = memes[indexPath.row]
         
         cell.textLabel?.text = "\(meme.topText) \(meme.bottomText)"
-        cell.detailTextLabel?.text = "Created \(meme.dateCreatedString)"
+        cell.detailTextLabel?.text = meme.dateCreatedString
         cell.imageView?.image = meme.memedImage
         
         return cell
@@ -52,6 +52,7 @@ class MemeTableController: UIViewController, UITableViewDataSource, UITableViewD
         let detailController = self.storyboard?.instantiateViewControllerWithIdentifier("MemeDetailController") as! MemeDetailController
         
         detailController.meme = memes[indexPath.row]
+        detailController.memeIndex = indexPath.row
         
         if let navigationController = self.navigationController {
             navigationController.pushViewController(detailController, animated: true)
