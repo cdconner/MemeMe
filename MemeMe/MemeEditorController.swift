@@ -8,9 +8,14 @@
 
 import UIKit
 
+protocol MemeEditorControllerDelegate {
+    func memeSaved(memeEditor: MemeEditorController) -> Void
+}
+
 class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var meme: Meme?
+    var delegate: MemeEditorControllerDelegate?
 
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
@@ -76,6 +81,7 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
             returnedItems: [AnyObject]!,
             activityError: NSError!) -> Void in
                 self.save()
+                self.delegate?.memeSaved(self);
                 self.dismissViewControllerAnimated(true, completion: nil)
         }
         
