@@ -41,7 +41,7 @@
             </objects>
             <point key="canvasLocation" x="-684" y="904"/>
         </scene>
-        <!--Sent memes-->
+        <!--Memes-->
         <scene sceneID="3bh-nf-jhw">
             <objects>
                 <viewController id="Gv4-Lg-Ygo" customClass="MemeTableController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -57,7 +57,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeTableCell" textLabel="v4B-bN-epa" style="IBUITableViewCellStyleDefault" id="exm-Bc-bbf">
+                                    <tableViewCell contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="44" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeTableCell" textLabel="v4B-bN-epa" detailTextLabel="sAt-ZB-EAU" style="IBUITableViewCellStyleSubtitle" id="exm-Bc-bbf">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="exm-Bc-bbf" id="6jw-Qf-b4Z">
@@ -66,7 +66,13 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v4B-bN-epa">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sAt-ZB-EAU">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -107,7 +113,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Sent memes" id="Hmd-bW-D4b">
+                    <navigationItem key="navigationItem" title="Memes" id="Hmd-bW-D4b">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0XV-uz-A3T">
                             <connections>
                                 <action selector="createNewMeme:" destination="Gv4-Lg-Ygo" id="rCa-1e-JuE"/>
@@ -122,7 +128,7 @@
             </objects>
             <point key="canvasLocation" x="956" y="574"/>
         </scene>
-        <!--Sent memes-->
+        <!--Memes-->
         <scene sceneID="eFx-PH-BZy">
             <objects>
                 <viewController id="vCt-tO-edy" customClass="MemeCollectionController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -214,7 +220,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Sent memes" id="AxS-Ms-rv3">
+                    <navigationItem key="navigationItem" title="Memes" id="AxS-Ms-rv3">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="mqz-YX-dh0">
                             <connections>
                                 <action selector="createNewMeme:" destination="vCt-tO-edy" id="bUk-XQ-u0t"/>
@@ -229,10 +235,10 @@
             </objects>
             <point key="canvasLocation" x="956" y="1236"/>
         </scene>
-        <!--Sent meme-->
+        <!--Meme Detail Controller-->
         <scene sceneID="Hey-C0-lVB">
             <objects>
-                <viewController storyboardIdentifier="MemeDetailController" title="Sent meme" id="tqq-2Q-lJW" customClass="MemeDetailController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeDetailController" id="tqq-2Q-lJW" customClass="MemeDetailController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Du-NO-P4z"/>
                         <viewControllerLayoutGuide type="bottom" id="DHG-Je-5Ui"/>

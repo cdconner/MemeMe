@@ -9,6 +9,8 @@
 import UIKit
 
 class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    var meme: Meme?
 
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
@@ -18,6 +20,15 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
+    
+    override func viewDidLoad() {
+        //MARK: IF provided with a Meme object load into view
+        if let existingMeme = self.meme {
+            topTextField.text = existingMeme.topText
+            bottomTextField.text = existingMeme.bottomText
+            imageView.image = existingMeme.originalImage
+        }
+    }
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -106,10 +117,10 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     //MARK: Save meme
     func save() {
-        var meme = Meme(topText: topTextField.text, bottomText: bottomTextField.text, originalImage: imageView.image!, memedImage: generateMemedImage())
+        self.meme = Meme(topText: topTextField.text, bottomText: bottomTextField.text, originalImage: imageView.image!, memedImage: generateMemedImage())
         
         var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.memes.append(meme)
+        appDelegate.memes.append(self.meme!)
     }
     
     func generateMemedImage() -> UIImage{
