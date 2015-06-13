@@ -21,7 +21,7 @@ class MemeDetailController: UIViewController {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         self.meme = appDelegate.memes[memeIndex]
         
-        imageView.image = meme.memedImage
+        imageView.image = self.meme.memedImage
         
         if let navigationController = self.navigationController {
             let editButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Edit, target: self, action: "launchMemeEditor")
