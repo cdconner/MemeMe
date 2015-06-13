@@ -126,13 +126,10 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
     func generateMemedImage() -> UIImage{
         //Make sure text fields aren't currently be edited, otherwise
         //cursor will show or view will be shift because of keyboard.
-        
-        if (topTextField.isFirstResponder()) {
-            topTextField.resignFirstResponder()
-        }
-        if(bottomTextField.isFirstResponder()) {
-            bottomTextField.resignFirstResponder()
-        }
+
+        topTextField.resignFirstResponder()
+        bottomTextField.resignFirstResponder()
+
         bottomBar.hidden = true
         
         UIGraphicsBeginImageContext(self.view.frame.size)
