@@ -14,7 +14,6 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
     @IBOutlet weak var bottomTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     
-    @IBOutlet weak var topBar: UIToolbar!
     @IBOutlet weak var bottomBar: UIToolbar!
     
     @IBOutlet weak var shareButton: UIBarButtonItem!
@@ -114,7 +113,6 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
     }
     
     func generateMemedImage() -> UIImage{
-        topBar.hidden = true
         bottomBar.hidden = true
         
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -123,7 +121,6 @@ class MemeEditorController: UIViewController, UITextFieldDelegate, UIImagePicker
         let memedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        topBar.hidden = false
         bottomBar.hidden = false
         
         return memedImage

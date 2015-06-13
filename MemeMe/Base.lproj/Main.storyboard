@@ -189,6 +189,7 @@
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="vCt-tO-edy" id="D7c-8l-Rt1"/>
+                                    <outlet property="delegate" destination="vCt-tO-edy" id="fmL-SF-Hs9"/>
                                 </connections>
                             </collectionView>
                         </subviews>
@@ -239,34 +240,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZGx-ny-g1Y">
-                                <rect key="frame" x="0.0" y="64" width="600" height="520"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZGx-ny-g1Y">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nNs-PX-L6h">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem systemItem="action" id="RVW-Lx-AZT">
-                                        <connections>
-                                            <action selector="shareMeme:" destination="tqq-2Q-lJW" id="Pr4-n9-7zn"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ZGx-ny-g1Y" firstAttribute="top" secondItem="nNs-PX-L6h" secondAttribute="bottom" id="4or-TJ-dON"/>
-                            <constraint firstItem="nNs-PX-L6h" firstAttribute="leading" secondItem="NDf-WM-d8V" secondAttribute="leadingMargin" constant="-16" id="D9S-GU-YXw"/>
                             <constraint firstItem="ZGx-ny-g1Y" firstAttribute="leading" secondItem="NDf-WM-d8V" secondAttribute="leadingMargin" constant="-16" id="DkO-jC-N7Q"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="nNs-PX-L6h" secondAttribute="trailing" constant="-16" id="HJ8-Hi-61C"/>
+                            <constraint firstItem="ZGx-ny-g1Y" firstAttribute="top" secondItem="8Du-NO-P4z" secondAttribute="bottom" id="OKP-GL-WBc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZGx-ny-g1Y" secondAttribute="trailing" constant="-16" id="QHa-6I-O6v"/>
+                            <constraint firstItem="ZGx-ny-g1Y" firstAttribute="top" secondItem="NDf-WM-d8V" secondAttribute="topMargin" id="kdp-QY-daS"/>
                             <constraint firstItem="ZGx-ny-g1Y" firstAttribute="top" secondItem="NDf-WM-d8V" secondAttribute="topMargin" id="m2O-IH-ssv"/>
-                            <constraint firstItem="nNs-PX-L6h" firstAttribute="top" secondItem="8Du-NO-P4z" secondAttribute="bottom" id="m7N-u6-Llk"/>
-                            <constraint firstItem="DHG-Je-5Ui" firstAttribute="top" secondItem="ZGx-ny-g1Y" secondAttribute="bottom" constant="16" id="qCi-GF-OAG"/>
+                            <constraint firstItem="DHG-Je-5Ui" firstAttribute="top" secondItem="ZGx-ny-g1Y" secondAttribute="bottom" id="qCi-GF-OAG"/>
+                            <constraint firstItem="ZGx-ny-g1Y" firstAttribute="top" secondItem="NDf-WM-d8V" secondAttribute="topMargin" id="vox-wf-DHw"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="kdp-QY-daS"/>
                                 <exclude reference="m2O-IH-ssv"/>
+                                <exclude reference="vox-wf-DHw"/>
                             </mask>
                         </variation>
                     </view>
@@ -311,59 +303,34 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yh8-JG-Yvb">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="uRI-fq-tIV"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem systemItem="action" id="PW1-eI-zMO">
-                                        <connections>
-                                            <action selector="shareMeme:" destination="BJf-XB-soI" id="hNZ-sT-plp"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="QsY-QO-sNV"/>
-                                    <barButtonItem systemItem="cancel" id="v7r-3R-bNY">
-                                        <connections>
-                                            <action selector="cancelMeme:" destination="BJf-XB-soI" id="P1d-K4-SZ6"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="uRI-fq-tIV"/>
-                                    </mask>
-                                </variation>
-                            </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SM4-sD-NF5">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
+                                    <barButtonItem systemItem="action" id="Ifr-h8-f4s">
+                                        <connections>
+                                            <action selector="shareMeme:" destination="BJf-XB-soI" id="RAz-YJ-ciR"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="00J-Ec-14H"/>
                                     <barButtonItem systemItem="camera" id="ioP-44-waL">
                                         <connections>
                                             <action selector="takePicture:" destination="BJf-XB-soI" id="hxZ-Bc-xea"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="TYW-mj-iRg"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="2gv-qD-pyd"/>
                                     <barButtonItem title="Album" id="hU6-RC-Zcg">
                                         <connections>
                                             <action selector="useAlbumPicture:" destination="BJf-XB-soI" id="tdd-DL-ZG3"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="nKi-3M-57v"/>
+                                    <barButtonItem systemItem="cancel" id="G7h-PH-wd9">
+                                        <connections>
+                                            <action selector="cancelMeme:" destination="BJf-XB-soI" id="Efw-19-Yx6"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Db-vC-aC6">
-                                <rect key="frame" x="16" y="74" width="568" height="72"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="72" id="Iqp-dZ-hPW"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BJf-XB-soI" id="cj5-DU-5cF"/>
-                                </connections>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qL9-aP-7he">
                                 <rect key="frame" x="16" y="454" width="568" height="72"/>
                                 <constraints>
@@ -375,41 +342,41 @@
                                     <outlet property="delegate" destination="BJf-XB-soI" id="WlH-1r-Nsb"/>
                                 </connections>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Db-vC-aC6">
+                                <rect key="frame" x="16" y="60" width="568" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="Iqp-dZ-hPW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BJf-XB-soI" id="cj5-DU-5cF"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Kx6-D9-3h3" secondAttribute="trailing" constant="-16" id="09f-wW-Nwj"/>
-                            <constraint firstItem="6Db-vC-aC6" firstAttribute="top" secondItem="Yh8-JG-Yvb" secondAttribute="bottom" constant="30" id="1oI-oo-UJ0"/>
                             <constraint firstItem="Kx6-D9-3h3" firstAttribute="top" secondItem="XK0-rp-Ew9" secondAttribute="bottom" constant="-20" id="47P-30-3Lp"/>
                             <constraint firstItem="Hao-tC-jf6" firstAttribute="top" secondItem="Kx6-D9-3h3" secondAttribute="bottom" id="5MZ-Xg-Q50"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Yh8-JG-Yvb" secondAttribute="trailing" constant="-16" id="9jb-Vi-aX3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SM4-sD-NF5" secondAttribute="trailing" constant="-16" id="CtO-70-OCs"/>
                             <constraint firstItem="qL9-aP-7he" firstAttribute="leading" secondItem="lG5-Id-CbR" secondAttribute="leadingMargin" id="Dyl-dE-rp7"/>
                             <constraint firstItem="6Db-vC-aC6" firstAttribute="trailing" secondItem="lG5-Id-CbR" secondAttribute="trailingMargin" id="EjB-um-jpu"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Yh8-JG-Yvb" secondAttribute="trailing" constant="-16" id="FKT-87-KgS"/>
-                            <constraint firstItem="Yh8-JG-Yvb" firstAttribute="top" secondItem="XK0-rp-Ew9" secondAttribute="bottom" id="GeL-Ul-r3S"/>
-                            <constraint firstItem="6Db-vC-aC6" firstAttribute="top" secondItem="Yh8-JG-Yvb" secondAttribute="bottom" constant="30" id="J0i-Do-Clm"/>
-                            <constraint firstItem="Yh8-JG-Yvb" firstAttribute="top" secondItem="XK0-rp-Ew9" secondAttribute="bottom" constant="-20" id="O4C-wa-NkL"/>
+                            <constraint firstItem="Kx6-D9-3h3" firstAttribute="top" secondItem="lG5-Id-CbR" secondAttribute="topMargin" id="HBl-kh-7r9"/>
                             <constraint firstItem="SM4-sD-NF5" firstAttribute="leading" secondItem="lG5-Id-CbR" secondAttribute="leadingMargin" constant="-16" id="OUB-bC-MHv"/>
-                            <constraint firstItem="Yh8-JG-Yvb" firstAttribute="leading" secondItem="lG5-Id-CbR" secondAttribute="leadingMargin" constant="-16" id="Ol7-LT-0Yf"/>
                             <constraint firstItem="Hao-tC-jf6" firstAttribute="top" secondItem="SM4-sD-NF5" secondAttribute="bottom" id="Phk-lZ-ylU"/>
                             <constraint firstItem="Kx6-D9-3h3" firstAttribute="leading" secondItem="lG5-Id-CbR" secondAttribute="leadingMargin" constant="-16" id="UWr-Sa-7xB"/>
-                            <constraint firstItem="Yh8-JG-Yvb" firstAttribute="leading" secondItem="lG5-Id-CbR" secondAttribute="leadingMargin" constant="-16" id="mKl-J4-0fS"/>
                             <constraint firstItem="SM4-sD-NF5" firstAttribute="top" secondItem="qL9-aP-7he" secondAttribute="bottom" constant="30" id="nes-Xf-FGf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Yh8-JG-Yvb" secondAttribute="trailing" constant="-16" id="njT-Xt-f5p"/>
                             <constraint firstItem="qL9-aP-7he" firstAttribute="trailing" secondItem="lG5-Id-CbR" secondAttribute="trailingMargin" id="t9N-z5-S8y"/>
+                            <constraint firstItem="6Db-vC-aC6" firstAttribute="top" secondItem="XK0-rp-Ew9" secondAttribute="bottom" constant="40" id="tAV-Ul-G0a"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Kx6-D9-3h3" secondAttribute="trailing" constant="-16" id="vXN-bT-g3e"/>
                             <constraint firstItem="6Db-vC-aC6" firstAttribute="leading" secondItem="lG5-Id-CbR" secondAttribute="leadingMargin" id="vpf-5W-VNR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SM4-sD-NF5" secondAttribute="trailing" constant="-16" id="xfM-oQ-U9K"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="47P-30-3Lp"/>
                                 <exclude reference="vXN-bT-g3e"/>
-                                <exclude reference="FKT-87-KgS"/>
-                                <exclude reference="GeL-Ul-r3S"/>
-                                <exclude reference="Ol7-LT-0Yf"/>
-                                <exclude reference="njT-Xt-f5p"/>
-                                <exclude reference="J0i-Do-Clm"/>
                                 <exclude reference="xfM-oQ-U9K"/>
                             </mask>
                         </variation>
@@ -419,8 +386,7 @@
                         <outlet property="bottomTextField" destination="qL9-aP-7he" id="pWT-Ik-uqc"/>
                         <outlet property="cameraButton" destination="ioP-44-waL" id="jZb-JR-rvx"/>
                         <outlet property="imageView" destination="Kx6-D9-3h3" id="1IX-pN-C5Q"/>
-                        <outlet property="shareButton" destination="PW1-eI-zMO" id="Fbt-by-CnR"/>
-                        <outlet property="topBar" destination="Yh8-JG-Yvb" id="fuy-AU-8vv"/>
+                        <outlet property="shareButton" destination="Ifr-h8-f4s" id="7Wh-Du-Feq"/>
                         <outlet property="topTextField" destination="6Db-vC-aC6" id="go1-3Z-n7h"/>
                     </connections>
                 </viewController>

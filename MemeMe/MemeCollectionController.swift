@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MemeCollectionController: UIViewController, UICollectionViewDataSource {
+class MemeCollectionController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     var memes: [Meme]!
@@ -42,6 +42,16 @@ class MemeCollectionController: UIViewController, UICollectionViewDataSource {
         cell.memeImage.image = meme.memedImage
         
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let detailController = self.storyboard?.instantiateViewControllerWithIdentifier("MemeDetailController") as! MemeDetailController
+        
+        detailController.meme = memes[indexPath.row]
+        
+        if let navigationController = self.navigationController {
+            navigationController.pushViewController(detailController, animated: true)
+        }
     }
     
 }
