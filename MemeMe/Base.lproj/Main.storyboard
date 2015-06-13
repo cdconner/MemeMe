@@ -303,34 +303,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SM4-sD-NF5">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem systemItem="action" id="Ifr-h8-f4s">
-                                        <connections>
-                                            <action selector="shareMeme:" destination="BJf-XB-soI" id="RAz-YJ-ciR"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="00J-Ec-14H"/>
-                                    <barButtonItem systemItem="camera" id="ioP-44-waL">
-                                        <connections>
-                                            <action selector="takePicture:" destination="BJf-XB-soI" id="hxZ-Bc-xea"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="2gv-qD-pyd"/>
-                                    <barButtonItem title="Album" id="hU6-RC-Zcg">
-                                        <connections>
-                                            <action selector="useAlbumPicture:" destination="BJf-XB-soI" id="tdd-DL-ZG3"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="nKi-3M-57v"/>
-                                    <barButtonItem systemItem="cancel" id="G7h-PH-wd9">
-                                        <connections>
-                                            <action selector="cancelMeme:" destination="BJf-XB-soI" id="Efw-19-Yx6"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qL9-aP-7he">
                                 <rect key="frame" x="16" y="454" width="568" height="72"/>
                                 <constraints>
@@ -353,6 +325,34 @@
                                     <outlet property="delegate" destination="BJf-XB-soI" id="cj5-DU-5cF"/>
                                 </connections>
                             </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SM4-sD-NF5">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="Ifr-h8-f4s">
+                                        <connections>
+                                            <action selector="shareMeme:" destination="BJf-XB-soI" id="RAz-YJ-ciR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="00J-Ec-14H"/>
+                                    <barButtonItem title="Album" id="hU6-RC-Zcg">
+                                        <connections>
+                                            <action selector="useAlbumPicture:" destination="BJf-XB-soI" id="tdd-DL-ZG3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="2gv-qD-pyd"/>
+                                    <barButtonItem systemItem="camera" id="ioP-44-waL">
+                                        <connections>
+                                            <action selector="takePicture:" destination="BJf-XB-soI" id="hxZ-Bc-xea"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="nKi-3M-57v"/>
+                                    <barButtonItem systemItem="cancel" id="G7h-PH-wd9">
+                                        <connections>
+                                            <action selector="cancelMeme:" destination="BJf-XB-soI" id="Efw-19-Yx6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
