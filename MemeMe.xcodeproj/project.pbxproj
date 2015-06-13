@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FB5EEF621B290F20007252FB /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5EEF611B290F20007252FB /* Meme.swift */; };
+		FB8331C31B2BC4AF000B80E9 /* Impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB8331C21B2BC4AF000B80E9 /* Impact.ttf */; };
 		FBEF6B5E1B276589006A9BF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEF6B5D1B276589006A9BF6 /* AppDelegate.swift */; };
 		FBEF6B601B276589006A9BF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEF6B5F1B276589006A9BF6 /* ViewController.swift */; };
 		FBEF6B631B276589006A9BF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBEF6B611B276589006A9BF6 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		FB5EEF611B290F20007252FB /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
+		FB8331C21B2BC4AF000B80E9 /* Impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Impact.ttf; sourceTree = "<group>"; };
 		FBEF6B581B276589006A9BF6 /* MemeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBEF6B5C1B276589006A9BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBEF6B5D1B276589006A9BF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		FBEF6B5B1B276589006A9BF6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FB8331C21B2BC4AF000B80E9 /* Impact.ttf */,
 				FBEF6B5C1B276589006A9BF6 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -211,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB8331C31B2BC4AF000B80E9 /* Impact.ttf in Resources */,
 				FBEF6B631B276589006A9BF6 /* Main.storyboard in Resources */,
 				FBEF6B681B276589006A9BF6 /* LaunchScreen.xib in Resources */,
 				FBEF6B651B276589006A9BF6 /* Images.xcassets in Resources */,
