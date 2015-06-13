@@ -22,6 +22,13 @@ class MemeCollectionController: UIViewController, UICollectionViewDataSource {
         //If you don't reload the table it won't see any changes!
         self.collectionView.reloadData()
     }
+    
+    @IBAction func createNewMeme(sender: AnyObject) {
+        let editorController = self.storyboard?.instantiateViewControllerWithIdentifier("MemeEditorController") as! MemeEditorController
+        
+        self.presentViewController(editorController, animated: true, completion: nil)
+    }
+
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return memes.count

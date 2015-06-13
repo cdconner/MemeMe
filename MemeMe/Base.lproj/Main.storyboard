@@ -213,7 +213,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Sent memes" id="AxS-Ms-rv3">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mqz-YX-dh0"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mqz-YX-dh0">
+                            <connections>
+                                <action selector="createNewMeme:" destination="vCt-tO-edy" id="bUk-XQ-u0t"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="MgU-mP-btY" id="vCe-2J-yYy"/>
@@ -304,11 +308,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kx6-D9-3h3">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yh8-JG-Yvb">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="uRI-fq-tIV"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem systemItem="action" id="PW1-eI-zMO">
                                         <connections>
@@ -322,6 +329,11 @@
                                         </connections>
                                     </barButtonItem>
                                 </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="uRI-fq-tIV"/>
+                                    </mask>
+                                </variation>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SM4-sD-NF5">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
@@ -342,7 +354,7 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Db-vC-aC6">
-                                <rect key="frame" x="16" y="94" width="568" height="72"/>
+                                <rect key="frame" x="16" y="74" width="568" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="Iqp-dZ-hPW"/>
                                 </constraints>
@@ -368,15 +380,16 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Kx6-D9-3h3" secondAttribute="trailing" constant="-16" id="09f-wW-Nwj"/>
                             <constraint firstItem="6Db-vC-aC6" firstAttribute="top" secondItem="Yh8-JG-Yvb" secondAttribute="bottom" constant="30" id="1oI-oo-UJ0"/>
-                            <constraint firstItem="Kx6-D9-3h3" firstAttribute="top" secondItem="XK0-rp-Ew9" secondAttribute="bottom" id="47P-30-3Lp"/>
+                            <constraint firstItem="Kx6-D9-3h3" firstAttribute="top" secondItem="XK0-rp-Ew9" secondAttribute="bottom" constant="-20" id="47P-30-3Lp"/>
                             <constraint firstItem="Hao-tC-jf6" firstAttribute="top" secondItem="Kx6-D9-3h3" secondAttribute="bottom" id="5MZ-Xg-Q50"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Yh8-JG-Yvb" secondAttribute="trailing" constant="-16" id="9jb-Vi-aX3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SM4-sD-NF5" secondAttribute="trailing" constant="-16" id="CtO-70-OCs"/>
                             <constraint firstItem="qL9-aP-7he" firstAttribute="leading" secondItem="lG5-Id-CbR" secondAttribute="leadingMargin" id="Dyl-dE-rp7"/>
                             <constraint firstItem="6Db-vC-aC6" firstAttribute="trailing" secondItem="lG5-Id-CbR" secondAttribute="trailingMargin" id="EjB-um-jpu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Yh8-JG-Yvb" secondAttribute="trailing" constant="-16" id="FKT-87-KgS"/>
                             <constraint firstItem="Yh8-JG-Yvb" firstAttribute="top" secondItem="XK0-rp-Ew9" secondAttribute="bottom" id="GeL-Ul-r3S"/>
                             <constraint firstItem="6Db-vC-aC6" firstAttribute="top" secondItem="Yh8-JG-Yvb" secondAttribute="bottom" constant="30" id="J0i-Do-Clm"/>
-                            <constraint firstItem="Yh8-JG-Yvb" firstAttribute="top" secondItem="XK0-rp-Ew9" secondAttribute="bottom" id="O4C-wa-NkL"/>
+                            <constraint firstItem="Yh8-JG-Yvb" firstAttribute="top" secondItem="XK0-rp-Ew9" secondAttribute="bottom" constant="-20" id="O4C-wa-NkL"/>
                             <constraint firstItem="SM4-sD-NF5" firstAttribute="leading" secondItem="lG5-Id-CbR" secondAttribute="leadingMargin" constant="-16" id="OUB-bC-MHv"/>
                             <constraint firstItem="Yh8-JG-Yvb" firstAttribute="leading" secondItem="lG5-Id-CbR" secondAttribute="leadingMargin" constant="-16" id="Ol7-LT-0Yf"/>
                             <constraint firstItem="Hao-tC-jf6" firstAttribute="top" secondItem="SM4-sD-NF5" secondAttribute="bottom" id="Phk-lZ-ylU"/>
@@ -392,6 +405,7 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="vXN-bT-g3e"/>
+                                <exclude reference="FKT-87-KgS"/>
                                 <exclude reference="GeL-Ul-r3S"/>
                                 <exclude reference="Ol7-LT-0Yf"/>
                                 <exclude reference="njT-Xt-f5p"/>
