@@ -17,9 +17,10 @@ class MemeTableController: UIViewController, UITableViewDataSource, UITableViewD
         super.viewDidLoad()
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        if( appDelegate.memes.count == 0 ) {
-            launchMemeEditor()
-        }
+
+//        if( appDelegate.memes.count == 0 ) {
+//            launchMemeEditor()
+//        }
     }
     
     override func viewWillAppear(animated: Bool) {
