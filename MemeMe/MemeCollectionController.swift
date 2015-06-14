@@ -20,13 +20,13 @@ class MemeCollectionController: UIViewController, UICollectionViewDataSource, UI
         memes = appDelegate.memes
         
         //If you don't reload the table it won't see any changes!
-        self.collectionView.reloadData()
+        collectionView.reloadData()
     }
     
     @IBAction func createNewMeme(sender: AnyObject) {
         let editorController = self.storyboard?.instantiateViewControllerWithIdentifier("MemeEditorController") as! MemeEditorController
         
-        self.presentViewController(editorController, animated: true, completion: nil)
+        presentViewController(editorController, animated: true, completion: nil)
     }
 
 

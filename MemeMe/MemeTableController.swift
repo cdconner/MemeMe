@@ -17,10 +17,6 @@ class MemeTableController: UIViewController, UITableViewDataSource, UITableViewD
         super.viewDidLoad()
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-
-//        if( appDelegate.memes.count == 0 ) {
-//            launchMemeEditor()
-//        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -30,11 +26,11 @@ class MemeTableController: UIViewController, UITableViewDataSource, UITableViewD
         memes = appDelegate.memes
         
         //If you don't reload the table it won't see any changes!
-        self.tableView.reloadData()
+        tableView.reloadData()
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.memes.count
+        return memes.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -66,6 +62,6 @@ class MemeTableController: UIViewController, UITableViewDataSource, UITableViewD
     func launchMemeEditor() {
         let editorController = self.storyboard?.instantiateViewControllerWithIdentifier("MemeEditorController") as! MemeEditorController
         
-        self.presentViewController(editorController, animated: true, completion: nil)
+        presentViewController(editorController, animated: true, completion: nil)
     }
 }

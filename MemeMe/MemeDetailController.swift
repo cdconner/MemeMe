@@ -19,31 +19,30 @@ class MemeDetailController: UIViewController {
         super.viewWillAppear(animated)
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        self.meme = appDelegate.memes[memeIndex]
+        meme = appDelegate.memes[memeIndex]
         
-        imageView.image = self.meme.memedImage
+        imageView.image = meme.memedImage
         
         if let navigationController = self.navigationController {
             let editButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Edit, target: self, action: "launchMemeEditor")
             let deleteButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Trash, target: self, action: "deleteMeme")
-            self.navigationItem.rightBarButtonItems = [editButton, deleteButton]
-            //self.navigationItem.rightBarButtonItem = editButton
+            navigationItem.rightBarButtonItems = [editButton, deleteButton]
         }
     }
     
     func launchMemeEditor() {
-        let editorController = self.storyboard?.instantiateViewControllerWithIdentifier("MemeEditorController") as! MemeEditorController
+        let editorController = storyboard?.instantiateViewControllerWithIdentifier("MemeEditorController") as! MemeEditorController
         
-        editorController.memeIndex = self.memeIndex
+        editorController.memeIndex = memeIndex
         editorController.meme = meme
         
-        self.presentViewController(editorController, animated: true, completion: nil )
+        presentViewController(editorController, animated: true, completion: nil )
     }
     
     func deleteMeme() {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.memes.removeAtIndex(self.memeIndex)
+        appDelegate.memes.removeAtIndex(memeIndex)
         println("La la la deleting \(self.memeIndex)")
-        self.navigationController?.popViewControllerAnimated(true)
+        navigationController?.popViewControllerAnimated(true)
     }
 }

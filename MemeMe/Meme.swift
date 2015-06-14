@@ -18,14 +18,14 @@ struct Meme {
     var dateCreatedString: String {
         let dateFormatter = NSDateFormatter()
         
-        if( self.dateCreated.timeIntervalSinceNow < (60*60*24) ){
+        if( dateCreated.timeIntervalSinceNow < (60*60*24) ){
             dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
         } else {
             dateFormatter.dateStyle = NSDateFormatterStyle.LongStyle
         }
  
         dateFormatter.doesRelativeDateFormatting = true
-        return dateFormatter.stringFromDate(self.dateCreated)
+        return dateFormatter.stringFromDate(dateCreated)
     }
     
     init(topText: String, bottomText: String, originalImage: UIImage, memedImage: UIImage) {
