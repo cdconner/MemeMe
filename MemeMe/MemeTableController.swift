@@ -10,33 +10,26 @@ import UIKit
 
 class MemeTableController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var memes: [Meme]!
     @IBOutlet weak var tableView: UITableView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        memes = appDelegate.memes
-        
         //If you don't reload the table it won't see any changes!
         tableView.reloadData()
     }
 
+    //MARK: DataSource methods
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return memes.count
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        return appDelegate.memes.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("MemeTableCell", forIndexPath: indexPath) as! UITableViewCell
         
-        let meme = memes[indexPath.row]
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let meme = appDelegate.memes[indexPath.row]
         
         cell.textLabel?.text = "\(meme.topText) \(meme.bottomText)"
         cell.detailTextLabel?.text = meme.dateCreatedString
@@ -45,6 +38,17 @@ class MemeTableController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
     }
     
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.memes.removeAtIndex(indexPath.row)
+        
+        tableView.beginUpdates()
+        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        tableView.endUpdates()
+
+    }
+    
+    //MARK: Delegate methods
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailController = self.storyboard?.instantiateViewControllerWithIdentifier("MemeDetailController") as! MemeDetailController
         
